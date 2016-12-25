@@ -37,12 +37,12 @@ $(document).ready(function() {
       animationEvent,
       function() {
         // Do something when the animation ends
-        $('#bell').show();
+        $('#bell').fadeIn();
         $('#bell').addClass('animate');
         $('#bell').addClass('vibrate');
 
-        $('#title').fadeIn();
-        $('#actor1, #actor4, #actor7').fadeIn();
+        $('#title').delay(800).fadeIn();
+        $('#actor1, #actor4, #actor7').delay(1600).fadeIn();
 
         $('#actor1').click(function(){
           $('#actor2').fadeIn();
