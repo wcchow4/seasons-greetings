@@ -33,52 +33,48 @@ $(document).ready(function() {
 
     var animationEvent = whichAnimationEvent();
 
-    $('#background path.cls-1').one(
+    $('#background').one(
       animationEvent,
       function() {
         // Do something when the animation ends
         $('#bell').show();
         $('#bell').addClass('animate');
+        $('#bell').addClass('vibrate');
 
-        $('#bell').one(
-          animationEvent,
-          function() {
-            $('#title').fadeIn();
-            $('#actor1, #actor4, #actor7').fadeIn();
+        $('#title').fadeIn();
+        $('#actor1, #actor4, #actor7').fadeIn();
 
-            $('#actor1').click(function(){
-              $('#actor2').fadeIn();
-              boxes[0] = 1;
-              onMessage();
-              $('#actor2').click(function() {
-                $('#actor3').fadeIn();
-                boxes[1] = 1;
-                onMessage();
-              });
-            });
+        $('#actor1').click(function(){
+          $('#actor2').fadeIn();
+          boxes[0] = 1;
+          onMessage();
+          $('#actor2').click(function() {
+            $('#actor3').fadeIn();
+            boxes[1] = 1;
+            onMessage();
+          });
+        });
 
-            $('#actor4').click(function(){
-              $('#actor5').fadeIn();
-              boxes[2] = 1;
-              onMessage();
-              $('#actor5').click(function() {
-                $('#actor6').fadeIn();
-                boxes[3] = 1;
-                onMessage();
-              });
-            });
+        $('#actor4').click(function(){
+          $('#actor5').fadeIn();
+          boxes[2] = 1;
+          onMessage();
+          $('#actor5').click(function() {
+            $('#actor6').fadeIn();
+            boxes[3] = 1;
+            onMessage();
+          });
+        });
 
-            $('#actor7').click(function(){
-              $('#actor8').fadeIn();
-              boxes[4] = 1;
-              onMessage();
-              $('#actor8').click(function() {
-                $('#actor9').fadeIn();
-                boxes[5] = 1;
-                onMessage();
-              });
-            });
-          }
-        );
+        $('#actor7').click(function(){
+          $('#actor8').fadeIn();
+          boxes[4] = 1;
+          onMessage();
+          $('#actor8').click(function() {
+            $('#actor9').fadeIn();
+            boxes[5] = 1;
+            onMessage();
+          });
+        });
     });
 });

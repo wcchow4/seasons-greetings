@@ -16,7 +16,7 @@ svg {
   display: none;
 }
 
-#background path.cls-1 {
+#background {
   -webkit-animation: rotate-and-scale-animation 2s linear;
 }
 
@@ -32,21 +32,6 @@ svg {
     100% {
       transform-origin: center center;
       -webkit-transform: rotate(360deg) scale(1);
-    }
-}
-
-#background path.cls-2 {
-  -webkit-animation: anti-rotate-and-scale-animation 2s linear;
-}
-
-@-webkit-keyframes anti-rotate-and-scale-animation {
-    0%  {
-      transform-origin: center center;
-      -webkit-transform: rotate(360deg) scale(0);
-    }
-    100% {
-      transform-origin: center center;
-      -webkit-transform: rotate(0deg) scale(1);
     }
 }
 
@@ -72,4 +57,23 @@ svg {
 
 .cls-29 {
   display: none;
+}
+
+#bell.vibrate {
+  -webkit-animation: vibrate-animation 3s infinite;
+}
+
+@-webkit-keyframes vibrate-animation {
+    0%  {
+      transform-origin: top center;
+      -webkit-transform: rotate(-15deg);
+    }
+    50% {
+      transform-origin: top center;
+      -webkit-transform: rotate(15deg);
+    }
+    100% {
+      transform-origin: top center;
+      -webkit-transform: rotate(-15deg);
+    }
 }
